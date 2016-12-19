@@ -5,8 +5,11 @@
        <link rel="stylesheet" type="text/css" href="/css/site.css">    
     </header>
 	    <main>
-	            <h1>Twitter Clone Course</h1>
-		    <p>We're learning HTML!</p>
+	      <form id="tweet-form" action="/tweets/create" method="POST">
+	          <input id="tweet-form-handle" type="text" name="handle" placeholder="Yo Ho Ho Brunecas">
+		  <textarea id="tweet-form-body" name="body" placeholder="What's happening?"></textarea>
+		    <button id="tweet-form-button">Jam it!</button>
+	     </form>
 	   </main>
 </html>
 
