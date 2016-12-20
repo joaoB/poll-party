@@ -16,3 +16,8 @@ app.get('/', function(req, res) {
 app.listen(8080, function() {
   console.log('Web server listening on port 8080!');
 });
+
+app.post('/tweets/create', function(req, res) {
+  // Code to create tweets goes here.
+    res.send('Creating tweet.');
+});
