@@ -2,6 +2,7 @@
 
 var mysql = require('mysql');
 var express = require('express');
+var bodyParser = require('body-parser');
 var app = express();
 
 var connection = mysql.createConnection({
@@ -21,6 +22,7 @@ connection.connect(function(err) {
 });
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('view engine', 'ejs');
 app.set('views', './views');
@@ -35,6 +37,16 @@ app.listen(8080, function() {
 });
 
 app.post('/tweets/create', function(req, res) {
-  // Code to create tweets goes here.
-    res.send('Creating tweet.');
+  var query = 'INSERT INTO Tweets(handle, body) VALUES(?, ?)';
+  var handle = req.body.handle;
+  var body = req.body.body;
+
+  connection.query(query, [handle, body], function(err) {
+    if(err) {
+      console.log(err);
+    }
+
+    res.redirect('/');
+  });
 });
+
