@@ -1,7 +1,24 @@
 'use strict'
 
+var mysql = require('mysql');
 var express = require('express');
 var app = express();
+
+var connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'root',
+  database: 'party'
+});
+
+
+connection.connect(function(err) {
+  if(err) {
+      console.log(err);
+      return;
+  }
+  console.log('Connected to the database.');
+});
 
 app.use(express.static('public'));
 
