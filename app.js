@@ -28,7 +28,14 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get('/', function(req, res) {
-  res.render('tweets');
+  var query = 'SELECT * FROM Tweets ORDER BY created_at DESC';
+
+  connection.query(query, function(err, results) {
+    if(err) {
+      console.log(err);
+    }
+    res.render('tweets', { tweets: results });
+  });
 });
 
 
