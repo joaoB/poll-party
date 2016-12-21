@@ -5,7 +5,10 @@
        <link rel="stylesheet" type="text/css" href="/css/site.css">    
     </header>
 	    <main>
-	      <form id="tweet-form" action="/tweets/create" method="POST">
+
+	    
+		
+		  <form id="tweet-form" action="/tweets/create" method="POST">
 	          <input id="tweet-form-handle" type="text" name="handle" placeholder="Yo Ho Ho Brunecas">
 		  <textarea id="tweet-form-body" name="body" placeholder="What's happening?"></textarea>
 		    <button id="tweet-form-button">Jam it!</button>
@@ -20,6 +23,15 @@
 			  <p><%= tweet.body %></p>
 			</article>
 		  <% } %>
+		  
+
+		  
 	   </main>
+	   
+	   
+	   	<div>
+		  	<div id="bot-triangle"></div>
+			<div id="left-triangle"></div>
+		</div>
 </html>
 
