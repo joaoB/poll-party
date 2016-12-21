@@ -4,6 +4,7 @@ var mysql = require('mysql');
 var express = require('express');
 var bodyParser = require('body-parser');
 var app = express();
+var moment = require('moment');
 
 var connection = mysql.createConnection({
   host: '127.0.0.1',
@@ -28,13 +29,18 @@ app.set('view engine', 'ejs');
 app.set('views', './views');
 
 app.get('/', function(req, res) {
-  var query = 'SELECT * FROM Tweets ORDER BY created_at DESC';
-
-  connection.query(query, function(err, results) {
-    if(err) {
-      console.log(err);
-    }
-    res.render('tweets', { tweets: results });
+	var query = 'SELECT * FROM Tweets ORDER BY created_at DESC';
+	connection.query(query, function(err, results) {
+		if(err) {
+			console.log(err);
+		}
+    
+		for(var i = 0; i < results.length; i++) {
+			var tweet = results[i];
+			tweet.time_from_now = moment(tweet.created_at).fromNow();
+		}
+	
+		res.render('tweets', { tweets: results });
   });
 });
 
