@@ -76,6 +76,15 @@ body {
   color: #8899a6;
 }
 
+.center {
+    margin: auto;
+    width: 50%;
+}
+
+#maze{
+	position: absolute;
+}
+
 #bot-triangle {
  width: 0;
  height: 0;
@@ -83,6 +92,8 @@ body {
  border-width: 0 200px 200px 200px;
  border-radius: 50px;
  border-color: transparent transparent #f59563 transparent;
+ position: relative;
+ top: 10px;
 }
 
 #left-triangle{
@@ -91,6 +102,34 @@ body {
 	border-style: solid;
 	border-width: 200px 0 200px 200px;
 	border-color: transparent transparent transparent #f67c5f;
-	margin-top: -400px;
+	position: relative;
+	border-radius: 50px;
+	bottom:398px;
+	 position: relative;
+ right: 10px;
+}
+
+#right-triangle{
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 200px 200px 200px 0;
+	border-color: transparent #f67c5f transparent transparent;
+	border-radius: 50px;
+	bottom:199px;
+	position: relative;
+	float:right;
+	left: 10px;
+	}
+
+
+#top-triangle{
+ position: relative;
+ bottom: 10px;
+	width: 0;
+	height: 0;
+	border-style: solid;
+	border-width: 200px 200px 0px 200px ;  
+	border-color: green transparent transparent transparent ;
 	border-radius: 50px;
 }
