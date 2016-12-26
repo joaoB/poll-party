@@ -44,6 +44,10 @@ app.get('/', function(req, res) {
   });
 });
 
+app.get('/tweets/:id([0-9]+)/edit', function(req, res) {
+  res.send(req.params.id);
+});
+
 
 app.listen(8080, function() {
   console.log('Web server listening on port 8080!');
