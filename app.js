@@ -60,6 +60,21 @@ app.get('/tweets/:id([0-9]+)/edit', function(req, res) {
   });
 });
 
+app.post('/tweets/:id([0-9]+)/update', function(req, res) {
+  var query = 'UPDATE Tweets SET body = ?, handle = ? WHERE id = ?';
+  var id = req.params.id;
+  var handle = req.body.handle;
+  var body = req.body.body;
+
+  connection.query(query, [body, handle, id], function(err) {
+    if(err) {
+      console.log(err);
+    }
+
+    res.redirect('/');
+  });
+});
+
 
 app.listen(8080, function() {
   console.log('Web server listening on port 8080!');
