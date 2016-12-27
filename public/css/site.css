@@ -81,61 +81,9 @@ body {
     width: 50%;
 }
 
-#maze{
-	position: absolute;
-	color: lightgrey;
-	font-size: 150px;
-	font-weight: bold;
+.board{
+	height: 100%;
 	
-}
-
-#bot-triangle {
- width: 0;
- height: 0;
- border-style: solid;
- border-width: 0 200px 200px 200px;
- border-radius: 50px;
- border-color: transparent transparent #E24E42 transparent;
- position: relative;
- top: 10px;
-}
-
-#left-triangle{
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 200px 0 200px 200px;
-	border-color: transparent transparent transparent #E9B000;
-	position: relative;
-	border-radius: 50px;
-	bottom:398px;
-	 position: relative;
- right: 10px;
-}
-
-#right-triangle{
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 200px 200px 200px 0;
-	border-color: transparent #EB6E80 transparent transparent;
-	border-radius: 50px;
-	bottom:199px;
-	position: relative;
-	float:right;
-	left: 10px;
-	}
-
-
-#top-triangle{
- position: relative;
- bottom: 10px;
-	width: 0;
-	height: 0;
-	border-style: solid;
-	border-width: 200px 200px 0px 200px ;  
-	border-color: #008F95 transparent transparent transparent ;
-	border-radius: 50px;
 }
 
 .v {
@@ -174,6 +122,12 @@ body {
   color: lightgrey;
   }
   
+  #solution{
+	  text-align: center;
+	  font-size: 120px;
+	  padding-top: 50px;
+  }
+  
   .left{
 	  float: left;
   }
@@ -189,3 +143,5 @@ body {
   .bottom{
 	  top: 200px;
   }
+  
+  
