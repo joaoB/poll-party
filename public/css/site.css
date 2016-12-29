@@ -127,19 +127,11 @@ body {
   background: #EB6E80;
   }
 
-  
-  
-  .square {
-  position: relative;
-  width: 200px;
-  height: 200px;
-  background: #008F95;
-  border-radius: 10px;
-  text-align: center;
-  line-height: 200px;
-  margin: auto;
+  .left-square {
+  background: #EB6E80;
   }
-
+  
+  
   
 .content {
   font-weight: bold;
