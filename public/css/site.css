@@ -109,6 +109,20 @@ body {
   position: relative;
   width: 200px;
   height: 200px;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 200px;
+  margin: auto;
+  }
+
+  .top-square {
+  background: #E24E42;
+  }
+
+  .square {
+  position: relative;
+  width: 200px;
+  height: 200px;
   background: #008F95;
   border-radius: 10px;
   text-align: center;
@@ -116,6 +130,7 @@ body {
   margin: auto;
   }
 
+  
 .content {
   font-weight: bold;
   font-size: 150px;
