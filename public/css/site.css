@@ -124,11 +124,13 @@ body {
   }
 
   .right-square {
-  background: #EB6E80;
+	background: #EB6E80;
+	float: right;
   }
 
   .left-square {
-  background: #EB6E80;
+	background: #008F95;
+	float: left;
   }
   
   
