@@ -121,6 +121,7 @@ body {
 
   .bot-square {
   background: #E9B000;
+  top: 200px;
   }
 
   .right-square {
@@ -147,20 +148,7 @@ body {
 	  padding-top: 50px;
   }
   
-  .left{
-	  float: left;
-  }
-  
-  .right{
-	  float: right;
-  }
-  
   .middleRow {
 	  width: 600px;
   }
-  
-  .bottom{
-	  top: 200px;
-  }
-  
   
